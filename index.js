@@ -67,17 +67,20 @@ const flight = {
       holdWeight: flight.baglimit.hold_weight,
     }
    }
+    
   
-  
-   document.body.innerHTML += '<h1> Letenky z Prahy do Barcelony </h1>';
-  
-  
-   document.body.innerHTML += '<h2> Název startovní země: </h2>' + '<p>' + flight.countryFrom.name + ' (' + flight.countryFrom.code + ')' + '</p>';
-   document.body.innerHTML += '<h2> Název cílové země: </h2>' + '<p>' + flight.countryTo.name + ' (' + flight.countryTo.code + ')' + '</p>';
-  
-  
-   document.body.innerHTML += '<h2> Maximální povolené rozměry příručního zavazadla: </h2>' + '<p>' + maxBagDimensions.handLuggage.handWidth + 'x' + maxBagDimensions.handLuggage.handHeight + 'x' + maxBagDimensions.handLuggage.handLenght + ' cm, váha ' + maxBagDimensions.handLuggage.handWeight + ' kg </p>';
-   document.body.innerHTML += '<h2> Cena za druhé zavazadlo: </h2>' + '<p>' + Math.ceil(flight.bags_price[2] * flight.conversion.EUR) + ' Kč </p>';
+    document.body.innerHTML += `<h1>
+      Letenky z Prahy do Barcelony</h1>
+      <h2>Název startovní země:</h2>
+        <p>${flight.countryFrom.name} (${flight.countryFrom.code})</p>
+      <h2>Název cílové země:</h2>
+        <p>${flight.countryTo.name} (${flight.countryTo.code})</p>
+      <h2>Maximální povolené rozměry příručního zavazadla:</h2>
+        <p>${maxBagDimensions.handLuggage.handWidth} x ${maxBagDimensions.handLuggage.handHeight} x ${maxBagDimensions.handLuggage.handLenght} cm, váha ${maxBagDimensions.handLuggage.handWeight} kg</p>
+      <h2>Cena za druhé zavazadlo:</h2>
+        <p>${Math.ceil(flight.bags_price[2] * flight.conversion.EUR)} Kč
+    </p>`;
+   
   
      
  
